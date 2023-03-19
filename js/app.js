@@ -32,5 +32,15 @@ var startGame = function () {
     postScore(80, playerName);
     postScore(-3, playerName);
 };
+var myResult = {
+    playerName: "Marie",
+    score: 5,
+    problemCount: 5,
+    factor: 7,
+};
+var player = {
+    name: "Daniel",
+    formatName: function () { return "Dan"; },
+};
 document.getElementById("startGame").addEventListener("click", startGame);
 //# sourceMappingURL=app.js.map

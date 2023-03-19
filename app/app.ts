@@ -53,4 +53,16 @@ const startGame = () => {
   postScore(-3, playerName);
 };
 
+let myResult: Result = {
+  playerName: "Marie",
+  score: 5,
+  problemCount: 5,
+  factor: 7,
+};
+
+let player: Person = {
+  name: "Daniel",
+  formatName: () => "Dan",
+};
+
 document.getElementById("startGame")!.addEventListener("click", startGame);
