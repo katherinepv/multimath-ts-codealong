@@ -1,9 +1,8 @@
 {
- "extends": "../tsconfig.base" // now uses all options in base config and any additonal below.
- ,"compilerOptions": {
-    "removeComments": true
-},
- "include": [
-    "./**/*"
-]
+  "extends": "../tsconfig.base", // now uses all options in base config and any additonal below.
+  "compilerOptions": {
+    "removeComments": true,
+    "outFile": "../js/app.js" // looks at all the files that get compiled and direcrs all of the output to a single file and makes sure the code in that file is ordered properly.
+  },
+  "files": ["./app.ts"]
 }

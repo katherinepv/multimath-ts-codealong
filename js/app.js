@@ -1,3 +1,11 @@
+var Player = (function () {
+    function Player() {
+    }
+    Player.prototype.formatName = function () {
+        return this.name.toUpperCase();
+    };
+    return Player;
+}());
 var logPlayer = function (name) {
     if (name === void 0) { name = "MultiMath Player"; }
     console.log("New game starting for player: ".concat(name));
@@ -32,15 +40,8 @@ var startGame = function () {
     postScore(80, playerName);
     postScore(-3, playerName);
 };
-var myResult = {
-    playerName: "Marie",
-    score: 5,
-    problemCount: 5,
-    factor: 7,
-};
-var player = {
-    name: "Daniel",
-    formatName: function () { return "Dan"; },
-};
+var firstPlayer = new Player();
+firstPlayer.name = "Lanier";
+console.log(firstPlayer.formatName());
 document.getElementById("startGame").addEventListener("click", startGame);
 //# sourceMappingURL=app.js.map

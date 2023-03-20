@@ -1,3 +1,11 @@
+/// <reference path="player.ts" />
+// ^ adds a triple slash directive
+// essentially a single-line comment that must appear at the very beginning of a file in order to provide additional instructions to the compiler.
+// can be configured to do many things
+// most common use is to provide reference to another file.
+// in this example, it says the code in this file is dependent on the code in the player.ts file.
+// the compiler will automatically compile player.ts whenevr it compiles app.ts
+
 const logPlayer = (name: string = "MultiMath Player"): void => {
   console.log(`New game starting for player: ${name}`);
 };
@@ -53,16 +61,10 @@ const startGame = () => {
   postScore(-3, playerName);
 };
 
-let myResult: Result = {
-  playerName: "Marie",
-  score: 5,
-  problemCount: 5,
-  factor: 7,
-};
-
-let player: Person = {
-  name: "Daniel",
-  formatName: () => "Dan",
-};
+// declare variable and assign it the Player type.
+// Then initialise it to an instance of the player class by using the 'new' keyword and the name of the class with parentheses.
+const firstPlayer: Player = new Player();
+firstPlayer.name = "Lanier";
+console.log(firstPlayer.formatName());
 
 document.getElementById("startGame")!.addEventListener("click", startGame);
